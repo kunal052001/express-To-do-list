@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Register Page </title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: rgba(0, 0, 0, 0.741);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 100vh;
+            z-index: 1;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        a,
+        button {
+            background-color: #194183;
+            border: 1px solid white;
+            border-radius: 5px;
+            color: orange;
+            padding: 15px;
+            cursor: pointer;
+        }
+
+        form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form div {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input {
+            color: white;
+            width: 100%;
+            border: 0.5px solid white;
+            padding: 12px 20px;
+            outline: 0px solid rgb(255, 255, 255);
+            border-radius: 4px;
+            background: transparent;
+            box-sizing: border-box;
+        }
+
+        a:hover,
+        button:hover {
+            opacity: 0.7;
+        }
+
+        .href {
+            background: rgb(0, 0, 48);
+            text-align: center;
+        }
+
+        .container {
+            color: white;
+            border: 1px solid #f1f1f1;
+            border-radius: 25px;
+            width: 25%;
+            overflow: hidden;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            background-color: #2d2d2dd2;
+        }
+    </style>
+</head>
+<body>
+    <form class="container" action='/register' method="POST">
+        <h1> Register Form </h1>
+        <div>
+            <input type="text" placeholder="Enter Name" name="name" required>
+
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+        </div>
+        <div>
+            <button type="submit">Register</button>
+            <a class="href" href="/login">Login</a>
+        </div>
+    </form>
+
+</body>
+</html>
